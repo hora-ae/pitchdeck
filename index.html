@@ -631,14 +631,15 @@
       }
 
       #mask {
-        height: 150px;
+        height: 80px;
         width: 100vw;
         position: fixed;
+        z-index: 99;
         top: 0;
         right: 0;
         background: linear-gradient(
           180deg,
-          #161616 15%,
+          #161616 35%,
           rgba(255, 255, 255, 0) 100%
         );
       }
@@ -684,7 +685,7 @@
         position: fixed;
         top: 0;
         right: 0;
-        z-index: 2;
+        z-index: 999;
       }
 
       .logo-container .container {
