@@ -208,9 +208,9 @@
                 проверке и сопровождению сделок.
               </li>
               <li>
-                <b>Autospot</b> — онлайн-классифайд с откликом на каждое действие
-                пользователя выше 5 сек, аналог MyAvto: фокус на размещение
-                объявлений, без встроенного сопровождения покупки.
+                <b>Autospot</b> — онлайн-классифайд с откликом на каждое
+                действие пользователя выше 5 сек, аналог MyAvto: фокус на
+                размещение объявлений, без встроенного сопровождения покупки.
               </li>
             </ul>
 
@@ -236,7 +236,8 @@
             </p>
             <ul>
               <li>
-                <b>Stage 1</b> - платное продвижение объявлений (премиум-статусы)
+                <b>Stage 1</b> - платное продвижение объявлений
+                (премиум-статусы)
               </li>
               <li>
                 <b>Stage 2</b> - комиссия с услуг:
@@ -247,8 +248,8 @@
                 </ul>
               </li>
               <li>
-                <b>Stage 3</b> - ежемесячная абонентская плата за дилерский аккаунт с
-                витриной
+                <b>Stage 3</b> - ежемесячная абонентская плата за дилерский
+                аккаунт с витриной
               </li>
               <li><b>Stage 4</b> - процент с каждой арендной сделки</li>
             </ul>
@@ -406,42 +407,42 @@
             </ul>
             <h4>Доход</h4>
             <div id="table-container">
-                <table>
-                  <thead>
-                    <tr>
-                      <th>Stage</th>
-                      <th>Средний годовой доход ($)</th>
-                      <th>Источники дохода</th>
-                      <th>Комментарий</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>1</td>
-                      <td>~10,000</td>
-                      <td>Премиум-объявления ($20/объявление)</td>
-                      <td>Фокус на рост базы пользователей.</td>
-                    </tr>
-                    <tr>
-                      <td>2</td>
-                      <td>~370,000</td>
-                      <td>+ комиссия за сопровождение сделки (~3%)</td>
-                      <td>Запуск безопасных сделок, монетизация трафика.</td>
-                    </tr>
-                    <tr>
-                      <td>3</td>
-                      <td>~570,000</td>
-                      <td>+ Подписка автосалонов и мелких дилеров ($200/мес)</td>
-                      <td>Переход в B2B сегмент, стабильные платежи.</td>
-                    </tr>
-                    <tr>
-                      <td>4</td>
-                      <td>~695,000</td>
-                      <td>+ Комиссия с аренды (10%)</td>
-                      <td>Максимальная монетизация, повторные сделки.</td>
-                    </tr>
-                  </tbody>
-                </table>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Stage</th>
+                    <th>Средний годовой доход ($)</th>
+                    <th>Источники дохода</th>
+                    <th>Комментарий</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>~10,000</td>
+                    <td>Премиум-объявления ($20/объявление)</td>
+                    <td>Фокус на рост базы пользователей.</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>~370,000</td>
+                    <td>+ комиссия за сопровождение сделки (~3%)</td>
+                    <td>Запуск безопасных сделок, монетизация трафика.</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>~570,000</td>
+                    <td>+ Подписка автосалонов и мелких дилеров ($200/мес)</td>
+                    <td>Переход в B2B сегмент, стабильные платежи.</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>~695,000</td>
+                    <td>+ Комиссия с аренды (10%)</td>
+                    <td>Максимальная монетизация, повторные сделки.</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
             * рассчет произведён для:
             <ul>
@@ -581,10 +582,12 @@
           window.innerHeight / 2 -
           100 +
           (25 - (window.innerHeight / 2 - 100)) * scrollProgress;
-        const translateX = -50 + (-100 + 50) * scrollProgress;
+        const translateX = 50 - 50 * scrollProgress;
+        const right = 50 - (50 - 5) * scrollProgress;
         const scale = 100 - (100 - 25) * scrollProgress;
 
         logo.style.top = `${top}px`;
+        logo.style.right = `${right}%`;
         logo.style.transform = `scale(${scale}%) translateX(${translateX}%)`;
       }
 
@@ -606,7 +609,7 @@
 
       body {
         overflow: auto;
-        padding-top: 65vh;
+        padding-top: 85vh;
         padding-bottom: 150px;
         box-sizing: border-box;
       }
@@ -616,7 +619,7 @@
         width: 100vw;
         position: fixed;
         top: 0;
-        left: 0;
+        right: 0;
         background: linear-gradient(
           180deg,
           #161616 15%,
@@ -637,8 +640,8 @@
         height: 200px;
         width: 750px;
         top: calc(50vh - 100px);
-        left: 50%;
-        transform: translateX(-50%);
+        right: 50%;
+        transform: translateX(50%);
         transition: all 0.2s linear;
         transform-origin: top right;
       }
@@ -664,7 +667,7 @@
         width: 100vw;
         position: fixed;
         top: 0;
-        left: 0;
+        right: 0;
         z-index: 2;
       }
 
@@ -755,7 +758,12 @@
         gap: 15px;
       }
 
-      h1,h2,h3,h4,h5,h6 {
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
         font-weight: 900;
       }
 
@@ -769,14 +777,15 @@
       table {
         min-width: 700px;
       }
-      td, th {
+      td,
+      th {
         text-align: center;
-        padding: .6rem 1rem;
+        padding: 0.6rem 1rem;
       }
       .logo svg.mobile {
-          display: none;
-        }
-      .container>h2:first-child {
+        display: none;
+      }
+      .container > h2:first-child {
         margin-top: 0;
       }
 
@@ -785,7 +794,7 @@
         z-index: 9;
       }
 
-      .container>h2 {
+      .container > h2 {
         padding: 0 15px;
       }
 
@@ -822,15 +831,15 @@
           margin: 0 -10px;
         }
         ul {
-            padding-left: 0;
+          padding-left: 0;
         }
         #contacts {
-            flex-direction: column;
-            align-items: start;
+          flex-direction: column;
+          align-items: start;
         }
         #table-container {
-            margin: 0 -25px;
-            padding: 0 25px;
+          margin: 0 -25px;
+          padding: 0 25px;
         }
       }
     </style>
